@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บันทึกข้อมูลพนักงาน</title>
+    <style>
+        /* ตั้งค่าพื้นหลังและฟอนต์ */
+        body {
+            font-family: 'Sarabun', sans-serif; /* ใช้ฟอนต์ไทยที่ดูทันสมัย */
+            background-color: #f2ede9; /* สีพื้นหลังโทนอุ่นตามรูป */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* กล่องฟอร์มขาว */
+        .form-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        /* หัวข้อ */
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        /* สไตล์ของ Label */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #000;
+        }
+
+        /* สไตล์ของ Input และ Select */
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box; /* ป้องกัน input ล้นขอบ */
+            font-size: 16px;
+        }
+
+        /* สไตล์ปุ่ม Submit */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745; /* สีเขียวตามรูป */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838; /* สีเขียวเข้มขึ้นเมื่อเอาเมาส์วาง */
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>บันทึกข้อมูลพนักงาน</h2>
+        
+        <form action="#">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="">
+
+            <label for="position">Position</label>
+            <select id="position" name="position">
+                <option value="manager">Manager</option>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+                <option value="hr">HR</option>
+            </select>
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
